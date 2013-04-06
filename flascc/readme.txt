@@ -3,7 +3,11 @@ On Windows:
 flascc and flex_sdk should be under C:
 
 Open the flascc cygwin shell (flascc/run.bat).
-cd to /cygdrive/c/work/git/moai-dev/flascc/build
+cd /cygdrive/c/work/git/moai-dev/flascc/build
+
+PATH="/cygdrive/c/flascc/sdk/usr/bin:/usr/local/bin:/usr/bin:/cygdrive/c/WINDOWS/system32"
+cmake ../
+make
 
 PATH=/cygdrive/c/flascc/sdk/usr/bin:$PATH cmake ../
 PATH=/cygdrive/c/flascc/sdk/usr/bin:$PATH make preinstall
