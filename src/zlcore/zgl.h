@@ -243,7 +243,6 @@ extern void		zglFlush				();
 extern u32		zglGetCap				( u32 cap );
 extern u32		zglGetError				();
 extern cc8*		zglGetErrorString		( u32 error );
-extern void		zglGetIntegerv			( u32 name, s32* params );
 extern cc8*		zglGetString			( u32 stringID );
 extern void		zglLineWidth			( float width );
 extern void		zglLoadIdentity			();

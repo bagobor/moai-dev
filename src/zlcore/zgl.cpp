@@ -537,14 +537,6 @@ cc8* zglGetErrorString ( u32 error ) {
 }
 
 //----------------------------------------------------------------//
-void zglGetIntegerv ( u32 name, s32* params ) {
-
-	assert ( sizeof ( GLint ) == sizeof ( s32 )); // TODO: handle this correctly
-
-	glGetIntegerv ( _remapEnum ( name ), ( GLint* )params );
-}
-
-//----------------------------------------------------------------//
 extern cc8* zglGetString ( u32 stringID ) {
 	return ( cc8* )glGetString ( _remapEnum ( stringID ));
 }
