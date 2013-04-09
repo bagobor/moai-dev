@@ -5,6 +5,9 @@
 
 #include <zlcore/zgl.h>
 
+#include <string>
+using namespace std;
+
 #ifdef MOAI_OS_WINDOWS
 	#define GLEW_STATIC
 	#include <gl/glew.h>
@@ -51,6 +54,18 @@
 	#define GL_RGBA8 GL_RGBA8_OES
 #endif
 
+#define REMAP_EXTENSION_PTR(target, ext) target = target ? target : ext;
+
+//================================================================//
+// globals
+//================================================================//
+
+static bool	sIsFramebufferSupported		= false;
+static bool	sIsOpenGLES					= false;
+static bool	sIsProgrammable				= false;
+static u32	sMaxTextureUnits			= 0;
+static u32	sMaxTextureSize				= 0;
+
 //================================================================//
 // enums
 //================================================================//
@@ -89,9 +104,6 @@ GLenum _remapEnum ( u32 zglEnum ) {
 		case ZGL_BUFFER_USAGE_STREAM_COPY:				return GL_STREAM_COPY;
 		case ZGL_BUFFER_USAGE_STREAM_DRAW:				return GL_STREAM_DRAW;
 		case ZGL_BUFFER_USAGE_STREAM_READ:				return GL_STREAM_READ;
-		
-		case ZGL_CAPS_MAX_TEXTURE_SIZE:					return GL_MAX_TEXTURE_SIZE;
-		case ZGL_CAPS_MAX_TEXTURE_UNITS:				return GL_MAX_TEXTURE_UNITS;
 		
 		case ZGL_COMPOSE_MODULATE:						return GL_MODULATE;
 		
@@ -243,29 +255,117 @@ GLenum _remapEnum ( u32 zglEnum ) {
 }
 
 //================================================================//
-// gfx
+// setup
 //================================================================//
 
 //----------------------------------------------------------------//
-//void zl_mutex_destroy () {
-//}
+void zglFinalize () {
+}
 
-//REMAP_EXTENSION_PTR ( glBindFramebuffer,						glBindFramebufferEXT )
-//REMAP_EXTENSION_PTR ( glCheckFramebufferStatus,					glCheckFramebufferStatusEXT )
-//REMAP_EXTENSION_PTR ( glDeleteFramebuffers,						glDeleteFramebuffersEXT )
-//REMAP_EXTENSION_PTR ( glDeleteRenderbuffers,					glDeleteRenderbuffersEXT )
-//REMAP_EXTENSION_PTR ( glFramebufferRenderbuffer,				glFramebufferRenderbufferEXT )
-//REMAP_EXTENSION_PTR ( glFramebufferTexture1D,					glFramebufferTexture1DEXT )
-//REMAP_EXTENSION_PTR ( glFramebufferTexture2D,					glFramebufferTexture2DEXT )
-//REMAP_EXTENSION_PTR ( glFramebufferTexture3D,					glFramebufferTexture3DEXT )
-//REMAP_EXTENSION_PTR ( glGenFramebuffers,						glGenFramebuffersEXT )
-//REMAP_EXTENSION_PTR ( glGenRenderbuffers,						glGenRenderbuffersEXT )
-//REMAP_EXTENSION_PTR ( glGenerateMipmap,							glGenerateMipmapEXT )
-//REMAP_EXTENSION_PTR ( glGetFramebufferAttachmentParameteriv,	glGetFramebufferAttachmentParameterivEXT )
-//REMAP_EXTENSION_PTR ( glGetRenderbufferParameteriv,				glGetRenderbufferParameterivEXT )
-//REMAP_EXTENSION_PTR ( glIsFramebuffer,							glIsFramebufferEXT )
-//REMAP_EXTENSION_PTR ( glIsRenderbuffer,							glIsRenderbufferEXT )
-//REMAP_EXTENSION_PTR ( glRenderbufferStorage,					glRenderbufferStorageEXT )	
+//----------------------------------------------------------------//
+void zglInitialize () {
+
+	u32 majorVersion = 0;
+	u32 minorVersion = 0;
+
+	bool isOpenGLES = false;
+
+	#ifdef __GLEW_H__
+		static bool initGlew = true;
+		if ( initGlew ) {
+			glewInit ();
+			initGlew = false;
+		}
+	#endif
+
+	string version = zglGetString ( ZGL_STRING_VERSION );
+	for ( u32 i = 0; version [ i ]; i++ ) {
+		version [ i ] = ( char )tolower ( version [ i ]);
+	}
+	
+	string gles = "opengl es";
+	
+	if ( version.find ( gles ) != version.npos ) {
+		isOpenGLES = true;
+		version = version.substr ( gles.length ());
+		
+		size_t space = version.find ( ' ' );
+		if ( space != version.npos ) {
+			version = version.substr ( space + 1 );
+		}
+	}
+	else {
+		isOpenGLES = false;
+	}
+	
+	version = version.substr ( 0, 3 );
+	
+	majorVersion = version.at ( 0 ) - '0';
+	minorVersion = version.at ( 2 ) - '0';
+	
+	#ifdef __FLASH__
+		isOpenGLES = true;
+		sIsProgrammable = false;
+		sIsFramebufferSupported = false;
+	#else
+		sIsProgrammable = ( majorVersion >= 2 );
+		sIsFramebufferSupported = true;
+	#endif
+	
+	#if defined ( __GLEW_H__ )
+	
+		// if framebuffer object is not in code, check to see if it's available as
+		// an extension and remap to core function pointers if so
+		if (( isOpenGLES == false ) && ( majorVersion < 3 )) {
+			
+			if ( glewIsSupported ( "GL_EXT_framebuffer_object" )) {
+		  
+				REMAP_EXTENSION_PTR ( glBindFramebuffer,						glBindFramebufferEXT )
+				REMAP_EXTENSION_PTR ( glCheckFramebufferStatus,					glCheckFramebufferStatusEXT )
+				REMAP_EXTENSION_PTR ( glDeleteFramebuffers,						glDeleteFramebuffersEXT )
+				REMAP_EXTENSION_PTR ( glDeleteRenderbuffers,					glDeleteRenderbuffersEXT )
+				REMAP_EXTENSION_PTR ( glFramebufferRenderbuffer,				glFramebufferRenderbufferEXT )
+				REMAP_EXTENSION_PTR ( glFramebufferTexture1D,					glFramebufferTexture1DEXT )
+				REMAP_EXTENSION_PTR ( glFramebufferTexture2D,					glFramebufferTexture2DEXT )
+				REMAP_EXTENSION_PTR ( glFramebufferTexture3D,					glFramebufferTexture3DEXT )
+				REMAP_EXTENSION_PTR ( glGenFramebuffers,						glGenFramebuffersEXT )
+				REMAP_EXTENSION_PTR ( glGenRenderbuffers,						glGenRenderbuffersEXT )
+				REMAP_EXTENSION_PTR ( glGenerateMipmap,							glGenerateMipmapEXT )
+				REMAP_EXTENSION_PTR ( glGetFramebufferAttachmentParameteriv,	glGetFramebufferAttachmentParameterivEXT )
+				REMAP_EXTENSION_PTR ( glGetRenderbufferParameteriv,				glGetRenderbufferParameterivEXT )
+				REMAP_EXTENSION_PTR ( glIsFramebuffer,							glIsFramebufferEXT )
+				REMAP_EXTENSION_PTR ( glIsRenderbuffer,							glIsRenderbufferEXT )
+				REMAP_EXTENSION_PTR ( glRenderbufferStorage,					glRenderbufferStorageEXT )	
+			}
+			else {
+				// looks like frame buffer isn't supported
+				sIsFramebufferSupported = false;
+			}
+		}
+
+	#endif
+	
+	int maxTextureUnits = 0;
+	
+	if ( majorVersion == 1 ) {
+		#if USE_OPENGLES1
+			glGetIntegerv ( GL_MAX_TEXTURE_UNITS, &maxTextureUnits );
+		#endif
+	}
+	else {
+		glGetIntegerv ( GL_MAX_TEXTURE_IMAGE_UNITS, &maxTextureUnits );
+	}
+
+	sMaxTextureUnits = ( u32 )maxTextureUnits;
+	
+	int maxTextureSize;
+	glGetIntegerv ( GL_MAX_TEXTURE_SIZE, &maxTextureSize );
+	sMaxTextureSize = ( u32 )maxTextureSize;
+}
+
+//================================================================//
+// gfx
+//================================================================//
 
 //----------------------------------------------------------------//
 void zglActiveTexture ( u32 textureUnit ) {
@@ -380,6 +480,22 @@ void zglEnable ( u32 cap ) {
 //----------------------------------------------------------------//
 void zglFlush () {
 	glFlush ();
+}
+
+//----------------------------------------------------------------//
+u32 zglGetCap ( u32 cap ) {
+
+	switch ( cap ) {
+		case ZGL_CAPS_IS_FRAMEBUFFER_SUPPORTED:
+			return sIsFramebufferSupported ? 1 : 0;
+		case ZGL_CAPS_IS_PROGRAMMABLE:
+			return sIsProgrammable ? 1 : 0;
+		case ZGL_CAPS_MAX_TEXTURE_SIZE:
+			return sMaxTextureSize;
+		case ZGL_CAPS_MAX_TEXTURE_UNITS:
+			return sMaxTextureUnits;
+	}
+	return 0;
 }
 
 //----------------------------------------------------------------//

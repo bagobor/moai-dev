@@ -17,8 +17,6 @@
 #include <moaicore/MOAIVertexFormatMgr.h>
 #include <moaicore/MOAIViewport.h>
 
-#define REMAP_EXTENSION_PTR(target, ext) target = target ? target : ext;
-
 //================================================================//
 // MOAIGfxDeleter
 //================================================================//
@@ -259,91 +257,17 @@ void MOAIGfxDevice::ClearErrors () {
 void MOAIGfxDevice::DetectContext () {
 
 	this->mHasContext = true;
-
-	#ifdef __GLEW_H__
-		static bool initGlew = true;
-		if ( initGlew ) {
-			glewInit ();
-			initGlew = false;
-		}
-	#endif
-
-	STLString version = zglGetString ( ZGL_STRING_VERSION );
-	version.to_lower ();
 	
-	STLString gles = "opengl es";
+	zglInitialize ();
 	
-	if ( version.find ( gles ) != version.npos ) {
-		this->mIsOpenGLES = true;
-		version = version.substr ( gles.length ());
-		
-		size_t space = version.find ( ' ' );
-		if ( space != version.npos ) {
-			version = version.substr ( space + 1 );
-		}
-	}
-	else {
-		this->mIsOpenGLES = false;
-	}
+	this->mIsProgrammable = zglGetCap ( ZGL_CAPS_IS_PROGRAMMABLE ) == 1;
+	this->mIsFramebufferSupported = zglGetCap ( ZGL_CAPS_IS_FRAMEBUFFER_SUPPORTED ) == 1;
 	
-	version = version.substr ( 0, 3 );
-	
-	this->mMajorVersion = version.at ( 0 ) - '0';
-	this->mMinorVersion = version.at ( 2 ) - '0';
-	
-	this->mIsProgrammable = ( this->mMajorVersion >= 2 );
-	this->mIsFramebufferSupported = true;
-	
-	#if defined ( __GLEW_H__ )
-	
-		// if framebuffer object is not in code, check to see if it's available as
-		// an extension and remap to core function pointers if so
-		if (( this->mIsOpenGLES == false ) && ( this->mMajorVersion < 3 )) {
-			
-			if ( glewIsSupported ( "GL_EXT_framebuffer_object" )) {
-		  
-				REMAP_EXTENSION_PTR ( glBindFramebuffer,						glBindFramebufferEXT )
-				REMAP_EXTENSION_PTR ( glCheckFramebufferStatus,					glCheckFramebufferStatusEXT )
-				REMAP_EXTENSION_PTR ( glDeleteFramebuffers,						glDeleteFramebuffersEXT )
-				REMAP_EXTENSION_PTR ( glDeleteRenderbuffers,					glDeleteRenderbuffersEXT )
-				REMAP_EXTENSION_PTR ( glFramebufferRenderbuffer,				glFramebufferRenderbufferEXT )
-				REMAP_EXTENSION_PTR ( glFramebufferTexture1D,					glFramebufferTexture1DEXT )
-				REMAP_EXTENSION_PTR ( glFramebufferTexture2D,					glFramebufferTexture2DEXT )
-				REMAP_EXTENSION_PTR ( glFramebufferTexture3D,					glFramebufferTexture3DEXT )
-				REMAP_EXTENSION_PTR ( glGenFramebuffers,						glGenFramebuffersEXT )
-				REMAP_EXTENSION_PTR ( glGenRenderbuffers,						glGenRenderbuffersEXT )
-				REMAP_EXTENSION_PTR ( glGenerateMipmap,							glGenerateMipmapEXT )
-				REMAP_EXTENSION_PTR ( glGetFramebufferAttachmentParameteriv,	glGetFramebufferAttachmentParameterivEXT )
-				REMAP_EXTENSION_PTR ( glGetRenderbufferParameteriv,				glGetRenderbufferParameterivEXT )
-				REMAP_EXTENSION_PTR ( glIsFramebuffer,							glIsFramebufferEXT )
-				REMAP_EXTENSION_PTR ( glIsRenderbuffer,							glIsRenderbufferEXT )
-				REMAP_EXTENSION_PTR ( glRenderbufferStorage,					glRenderbufferStorageEXT )	
-			}
-			else {
-				// looks like frame buffer isn't supported
-				this->mIsFramebufferSupported = false;
-			}
-		}
-	#endif
-	
-	int maxTextureUnits = 0;
-	
-	// TODO
-	//if ( this->mMajorVersion == 1 ) {
-	//	#if USE_OPENGLES1
-	//		glGetIntegerv ( ZGL_CAPS_MAX_TEXTURE_UNITS, &maxTextureUnits );
-	//	#endif
-	//}
-	//else {
-	//	glGetIntegerv ( GL_MAX_TEXTURE_IMAGE_UNITS, &maxTextureUnits );
-	//}
-
+	u32 maxTextureUnits = zglGetCap ( ZGL_CAPS_MAX_TEXTURE_UNITS );
 	this->mTextureUnits.Init ( maxTextureUnits );
 	this->mTextureUnits.Fill ( 0 );
 	
-	int maxTextureSize;
-	zglGetIntegerv ( ZGL_CAPS_MAX_TEXTURE_SIZE, &maxTextureSize );
-	this->mMaxTextureSize = maxTextureSize;
+	this->mMaxTextureSize = zglGetCap ( ZGL_CAPS_MAX_TEXTURE_SIZE );
 
 	this->mDeleterStack.Reset ();
 	this->ResetResources ();
