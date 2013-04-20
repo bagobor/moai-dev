@@ -1,6 +1,5 @@
 #ifndef MOAICORE_CONFIG_H
-
-	#define MOAICORE_CONFIG_H
+#define MOAICORE_CONFIG_H
 
 	#ifndef MOAI_WITH_BOX2D
 		#define MOAI_WITH_BOX2D 0

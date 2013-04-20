@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="zlcore"
+	Name="zl-vfs"
 	ProjectGUID="{A92A8C1C-C62D-43F8-98A9-C418A786BE56}"
-	RootNamespace="zlcore"
+	RootNamespace="zl-vfs"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="131072"
 	>
@@ -325,67 +325,67 @@
 	</References>
 	<Files>
 		<File
-			RelativePath="..\..\src\zlcore\pch.h"
+			RelativePath="..\..\src\zl-vfs\pch.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zgl.cpp"
+			RelativePath="..\..\src\zl-vfs\zgl.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zgl.h"
+			RelativePath="..\..\src\zl-vfs\zgl.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zgl_flascc.cpp"
+			RelativePath="..\..\src\zl-vfs\zgl_flascc.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_mutex.cpp"
+			RelativePath="..\..\src\zl-vfs\zl_mutex.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_mutex.h"
+			RelativePath="..\..\src\zl-vfs\zl_mutex.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_replace.h"
+			RelativePath="..\..\src\zl-vfs\zl_replace.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_replace_locale.h"
+			RelativePath="..\..\src\zl-vfs\zl_replace_locale.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_replace_new_delete.h"
+			RelativePath="..\..\src\zl-vfs\zl_replace_new_delete.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_replace_stdio.h"
+			RelativePath="..\..\src\zl-vfs\zl_replace_stdio.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_replace_stdlib.h"
+			RelativePath="..\..\src\zl-vfs\zl_replace_stdlib.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_types.h"
+			RelativePath="..\..\src\zl-vfs\zl_types.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_util.cpp"
+			RelativePath="..\..\src\zl-vfs\zl_util.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_util.h"
+			RelativePath="..\..\src\zl-vfs\zl_util.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zl_vfscanf.cpp"
+			RelativePath="..\..\src\zl-vfs\zl_vfscanf.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zlcore-pch.cpp"
+			RelativePath="..\..\src\zl-vfs\zlcore-pch.cpp"
 			>
 			<FileConfiguration
 				Name="Debug|Win32"
@@ -405,59 +405,59 @@
 			</FileConfiguration>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zlcore.cpp"
+			RelativePath="..\..\src\zl-vfs\zlcore.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\zlcore.h"
+			RelativePath="..\..\src\zl-vfs\zlcore.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLDirectoryItr.cpp"
+			RelativePath="..\..\src\zl-vfs\ZLDirectoryItr.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLDirectoryItr.h"
+			RelativePath="..\..\src\zl-vfs\ZLDirectoryItr.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLFile.cpp"
+			RelativePath="..\..\src\zl-vfs\ZLFile.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLFile.h"
+			RelativePath="..\..\src\zl-vfs\ZLFile.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLFileSystem.cpp"
+			RelativePath="..\..\src\zl-vfs\ZLFileSystem.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLFileSystem.h"
+			RelativePath="..\..\src\zl-vfs\ZLFileSystem.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLVirtualPath.cpp"
+			RelativePath="..\..\src\zl-vfs\ZLVirtualPath.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLVirtualPath.h"
+			RelativePath="..\..\src\zl-vfs\ZLVirtualPath.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLZipArchive.cpp"
+			RelativePath="..\..\src\zl-vfs\ZLZipArchive.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLZipArchive.h"
+			RelativePath="..\..\src\zl-vfs\ZLZipArchive.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLZipStream.cpp"
+			RelativePath="..\..\src\zl-vfs\ZLZipStream.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\zlcore\ZLZipStream.h"
+			RelativePath="..\..\src\zl-vfs\ZLZipStream.h"
 			>
 		</File>
 	</Files>

@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="uslscore"
+	Name="zl-util"
 	ProjectGUID="{86E29F0A-83D1-4001-9E1A-B20C6AECE6F7}"
-	RootNamespace="uslscore"
+	RootNamespace="zl-util"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="131072"
 	>
@@ -330,91 +330,91 @@
 			Name="util"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USAccessors.h"
+				RelativePath="..\..\src\zl-util\USAccessors.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USAdapterInfo_win32.cpp"
+				RelativePath="..\..\src\zl-util\USAdapterInfo_win32.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USBinarySearch.h"
+				RelativePath="..\..\src\zl-util\USBinarySearch.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDelegate.h"
+				RelativePath="..\..\src\zl-util\USDelegate.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDirectoryItr.cpp"
+				RelativePath="..\..\src\zl-util\USDirectoryItr.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDirectoryItr.h"
+				RelativePath="..\..\src\zl-util\USDirectoryItr.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USFileSys.cpp"
+				RelativePath="..\..\src\zl-util\USFileSys.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USFileSys.h"
+				RelativePath="..\..\src\zl-util\USFileSys.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USHashedString.cpp"
+				RelativePath="..\..\src\zl-util\USHashedString.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USHashedString.h"
+				RelativePath="..\..\src\zl-util\USHashedString.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USHexDump.cpp"
+				RelativePath="..\..\src\zl-util\USHexDump.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USHexDump.h"
+				RelativePath="..\..\src\zl-util\USHexDump.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLog.cpp"
+				RelativePath="..\..\src\zl-util\USLog.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLog.h"
+				RelativePath="..\..\src\zl-util\USLog.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USRadixSort16.h"
+				RelativePath="..\..\src\zl-util\USRadixSort16.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USRadixSort32.h"
+				RelativePath="..\..\src\zl-util\USRadixSort32.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USTypedPtr.cpp"
+				RelativePath="..\..\src\zl-util\USTypedPtr.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USTypedPtr.h"
+				RelativePath="..\..\src\zl-util\USTypedPtr.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USTypeID.h"
+				RelativePath="..\..\src\zl-util\USTypeID.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USUnique.h"
+				RelativePath="..\..\src\zl-util\USUnique.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USUnique_linux.cpp"
+				RelativePath="..\..\src\zl-util\USUnique_linux.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USUnique_win32.cpp"
+				RelativePath="..\..\src\zl-util\USUnique_win32.cpp"
 				>
 			</File>
 		</Filter>
@@ -422,31 +422,31 @@
 			Name="stl"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\STLArray.h"
+				RelativePath="..\..\src\zl-util\STLArray.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\STLIteration.h"
+				RelativePath="..\..\src\zl-util\STLIteration.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\STLList.h"
+				RelativePath="..\..\src\zl-util\STLList.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\STLMap.h"
+				RelativePath="..\..\src\zl-util\STLMap.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\STLSet.h"
+				RelativePath="..\..\src\zl-util\STLSet.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\STLString.cpp"
+				RelativePath="..\..\src\zl-util\STLString.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\STLString.h"
+				RelativePath="..\..\src\zl-util\STLString.h"
 				>
 			</File>
 		</Filter>
@@ -454,31 +454,31 @@
 			Name="templates"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USFactory.h"
+				RelativePath="..\..\src\zl-util\USFactory.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLeanArray.h"
+				RelativePath="..\..\src\zl-util\USLeanArray.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLeanList.h"
+				RelativePath="..\..\src\zl-util\USLeanList.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLeanPool.h"
+				RelativePath="..\..\src\zl-util\USLeanPool.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLeanStack.h"
+				RelativePath="..\..\src\zl-util\USLeanStack.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USList.h"
+				RelativePath="..\..\src\zl-util\USList.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USUnion.h"
+				RelativePath="..\..\src\zl-util\USUnion.h"
 				>
 			</File>
 		</Filter>
@@ -486,19 +486,19 @@
 			Name="time"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USDeviceTime.h"
+				RelativePath="..\..\src\zl-util\USDeviceTime.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDeviceTime_apple.cpp"
+				RelativePath="..\..\src\zl-util\USDeviceTime_apple.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDeviceTime_posix.cpp"
+				RelativePath="..\..\src\zl-util\USDeviceTime_posix.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDeviceTime_win32.cpp"
+				RelativePath="..\..\src\zl-util\USDeviceTime_win32.cpp"
 				>
 			</File>
 		</Filter>
@@ -506,179 +506,179 @@
 			Name="math"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USAffine2D.h"
+				RelativePath="..\..\src\zl-util\USAffine2D.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USAffine3D.h"
+				RelativePath="..\..\src\zl-util\USAffine3D.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USBox.cpp"
+				RelativePath="..\..\src\zl-util\USBox.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USBox.h"
+				RelativePath="..\..\src\zl-util\USBox.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USCurve.cpp"
+				RelativePath="..\..\src\zl-util\USCurve.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USCurve.h"
+				RelativePath="..\..\src\zl-util\USCurve.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDistance.cpp"
+				RelativePath="..\..\src\zl-util\USDistance.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USDistance.h"
+				RelativePath="..\..\src\zl-util\USDistance.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USFloat.h"
+				RelativePath="..\..\src\zl-util\USFloat.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USFrustum.cpp"
+				RelativePath="..\..\src\zl-util\USFrustum.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USFrustum.h"
+				RelativePath="..\..\src\zl-util\USFrustum.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USInterpolate.cpp"
+				RelativePath="..\..\src\zl-util\USInterpolate.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USInterpolate.h"
+				RelativePath="..\..\src\zl-util\USInterpolate.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USIntersect.cpp"
+				RelativePath="..\..\src\zl-util\USIntersect.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USIntersect.h"
+				RelativePath="..\..\src\zl-util\USIntersect.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMathConsts.h"
+				RelativePath="..\..\src\zl-util\USMathConsts.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMatrix.h"
+				RelativePath="..\..\src\zl-util\USMatrix.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMatrix3x3.h"
+				RelativePath="..\..\src\zl-util\USMatrix3x3.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMatrix4x4.h"
+				RelativePath="..\..\src\zl-util\USMatrix4x4.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMercator.cpp"
+				RelativePath="..\..\src\zl-util\USMercator.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMercator.h"
+				RelativePath="..\..\src\zl-util\USMercator.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPlane.cpp"
+				RelativePath="..\..\src\zl-util\USPlane.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPlane.h"
+				RelativePath="..\..\src\zl-util\USPlane.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPolar.cpp"
+				RelativePath="..\..\src\zl-util\USPolar.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPolar.h"
+				RelativePath="..\..\src\zl-util\USPolar.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPolygon2D.h"
+				RelativePath="..\..\src\zl-util\USPolygon2D.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPrism.cpp"
+				RelativePath="..\..\src\zl-util\USPrism.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPrism.h"
+				RelativePath="..\..\src\zl-util\USPrism.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USQuad.cpp"
+				RelativePath="..\..\src\zl-util\USQuad.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USQuad.h"
+				RelativePath="..\..\src\zl-util\USQuad.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USQuadCoord.cpp"
+				RelativePath="..\..\src\zl-util\USQuadCoord.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USQuadCoord.h"
+				RelativePath="..\..\src\zl-util\USQuadCoord.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USQuaternion.cpp"
+				RelativePath="..\..\src\zl-util\USQuaternion.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USQuaternion.h"
+				RelativePath="..\..\src\zl-util\USQuaternion.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USRect.h"
+				RelativePath="..\..\src\zl-util\USRect.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USRhombus.cpp"
+				RelativePath="..\..\src\zl-util\USRhombus.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USRhombus.h"
+				RelativePath="..\..\src\zl-util\USRhombus.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USSurface2D.cpp"
+				RelativePath="..\..\src\zl-util\USSurface2D.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USSurface2D.h"
+				RelativePath="..\..\src\zl-util\USSurface2D.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USTrig.cpp"
+				RelativePath="..\..\src\zl-util\USTrig.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USTrig.h"
+				RelativePath="..\..\src\zl-util\USTrig.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USVec2D.h"
+				RelativePath="..\..\src\zl-util\USVec2D.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USVec3D.h"
+				RelativePath="..\..\src\zl-util\USVec3D.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USVec4D.h"
+				RelativePath="..\..\src\zl-util\USVec4D.h"
 				>
 			</File>
 		</Filter>
@@ -686,110 +686,110 @@
 			Name="stream"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USByteStream.cpp"
+				RelativePath="..\..\src\zl-util\USByteStream.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USByteStream.h"
+				RelativePath="..\..\src\zl-util\USByteStream.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USFileStream.cpp"
+				RelativePath="..\..\src\zl-util\USFileStream.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USFileStream.h"
+				RelativePath="..\..\src\zl-util\USFileStream.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMemStream.cpp"
+				RelativePath="..\..\src\zl-util\USMemStream.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USMemStream.h"
+				RelativePath="..\..\src\zl-util\USMemStream.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USStream.cpp"
+				RelativePath="..\..\src\zl-util\USStream.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USStream.h"
+				RelativePath="..\..\src\zl-util\USStream.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USStreamReader.cpp"
+				RelativePath="..\..\src\zl-util\USStreamReader.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USStreamReader.h"
+				RelativePath="..\..\src\zl-util\USStreamReader.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USStreamWriter.cpp"
+				RelativePath="..\..\src\zl-util\USStreamWriter.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USStreamWriter.h"
+				RelativePath="..\..\src\zl-util\USStreamWriter.h"
 				>
 			</File>
 			<Filter
 				Name="encoding"
 				>
 				<File
-					RelativePath="..\..\src\uslscore\USBase64Encoder.cpp"
+					RelativePath="..\..\src\zl-util\USBase64Encoder.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USBase64Encoder.h"
+					RelativePath="..\..\src\zl-util\USBase64Encoder.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USBase64Reader.cpp"
+					RelativePath="..\..\src\zl-util\USBase64Reader.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USBase64Reader.h"
+					RelativePath="..\..\src\zl-util\USBase64Reader.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USBase64Writer.cpp"
+					RelativePath="..\..\src\zl-util\USBase64Writer.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USBase64Writer.h"
+					RelativePath="..\..\src\zl-util\USBase64Writer.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USDeflateReader.cpp"
+					RelativePath="..\..\src\zl-util\USDeflateReader.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USDeflateReader.h"
+					RelativePath="..\..\src\zl-util\USDeflateReader.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USDeflateWriter.cpp"
+					RelativePath="..\..\src\zl-util\USDeflateWriter.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USDeflateWriter.h"
+					RelativePath="..\..\src\zl-util\USDeflateWriter.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHexReader.cpp"
+					RelativePath="..\..\src\zl-util\USHexReader.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHexReader.h"
+					RelativePath="..\..\src\zl-util\USHexReader.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHexWriter.cpp"
+					RelativePath="..\..\src\zl-util\USHexWriter.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHexWriter.h"
+					RelativePath="..\..\src\zl-util\USHexWriter.h"
 					>
 				</File>
 			</Filter>
@@ -797,83 +797,83 @@
 				Name="hash"
 				>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriter.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriter.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriter.h"
+					RelativePath="..\..\src\zl-util\USHashWriter.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterAdler32.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterAdler32.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterAdler32.h"
+					RelativePath="..\..\src\zl-util\USHashWriterAdler32.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterCRC32.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterCRC32.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterCRC32.h"
+					RelativePath="..\..\src\zl-util\USHashWriterCRC32.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterMD5.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterMD5.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterMD5.h"
+					RelativePath="..\..\src\zl-util\USHashWriterMD5.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA1.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA1.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA1.h"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA1.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA224.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA224.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA224.h"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA224.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA256.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA256.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA256.h"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA256.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA384.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA384.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA384.h"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA384.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA512.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA512.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterSHA512.h"
+					RelativePath="..\..\src\zl-util\USHashWriterSHA512.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterWhirlpool.cpp"
+					RelativePath="..\..\src\zl-util\USHashWriterWhirlpool.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\uslscore\USHashWriterWhirlpool.h"
+					RelativePath="..\..\src\zl-util\USHashWriterWhirlpool.h"
 					>
 				</File>
 			</Filter>
@@ -882,19 +882,19 @@
 			Name="zip"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USZip.cpp"
+				RelativePath="..\..\src\zl-util\USZip.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USZip.h"
+				RelativePath="..\..\src\zl-util\USZip.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USZipFile.cpp"
+				RelativePath="..\..\src\zl-util\USZipFile.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USZipFile.h"
+				RelativePath="..\..\src\zl-util\USZipFile.h"
 				>
 			</File>
 		</Filter>
@@ -902,15 +902,15 @@
 			Name="gfxObjects"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USColor.cpp"
+				RelativePath="..\..\src\zl-util\USColor.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USColor.h"
+				RelativePath="..\..\src\zl-util\USColor.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USPolyScanner.h"
+				RelativePath="..\..\src\zl-util\USPolyScanner.h"
 				>
 			</File>
 		</Filter>
@@ -918,43 +918,43 @@
 			Name="parser"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USCgt.cpp"
+				RelativePath="..\..\src\zl-util\USCgt.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USCgt.h"
+				RelativePath="..\..\src\zl-util\USCgt.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLexStream.cpp"
+				RelativePath="..\..\src\zl-util\USLexStream.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USLexStream.h"
+				RelativePath="..\..\src\zl-util\USLexStream.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USParser.cpp"
+				RelativePath="..\..\src\zl-util\USParser.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USParser.h"
+				RelativePath="..\..\src\zl-util\USParser.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USSyntaxNode.cpp"
+				RelativePath="..\..\src\zl-util\USSyntaxNode.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USSyntaxNode.h"
+				RelativePath="..\..\src\zl-util\USSyntaxNode.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USSyntaxScanner.cpp"
+				RelativePath="..\..\src\zl-util\USSyntaxScanner.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USSyntaxScanner.h"
+				RelativePath="..\..\src\zl-util\USSyntaxScanner.h"
 				>
 			</File>
 		</Filter>
@@ -962,20 +962,20 @@
 			Name="xml"
 			>
 			<File
-				RelativePath="..\..\src\uslscore\USXmlReader.cpp"
+				RelativePath="..\..\src\zl-util\USXmlReader.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\uslscore\USXmlReader.h"
+				RelativePath="..\..\src\zl-util\USXmlReader.h"
 				>
 			</File>
 		</Filter>
 		<File
-			RelativePath="..\..\src\uslscore\pch.h"
+			RelativePath="..\..\src\zl-util\pch.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\uslscore\uslscore-pch.cpp"
+			RelativePath="..\..\src\zl-util\uslscore-pch.cpp"
 			>
 			<FileConfiguration
 				Name="Debug|Win32"
@@ -995,7 +995,7 @@
 			</FileConfiguration>
 		</File>
 		<File
-			RelativePath="..\..\src\uslscore\uslscore.h"
+			RelativePath="..\..\src\zl-util\uslscore.h"
 			>
 		</File>
 	</Files>
